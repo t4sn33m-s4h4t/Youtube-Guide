@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./ultimate-purpose.html">Purpose</a></li>
+            <li><a href="./understanding-hooks.html">Hooks</a></li>
+            <li><a href="./script-writing.html">Script</a></li>
+            <!-- <li>
+                <a>Skills</a>
+                <ul class="submenu">
+                    <li><a>React</a></li>
+                    <li><a>Svelte</a></li>    
+                    <li><a>VueJs</a></li>
+                </ul>
+            </li> -->
+            <li>
+                <a href="./niches.html">Niches</a>
+            </li>
+        </ul>
+    </nav>
+    
+      
+    <div id='main'>
+        <h1 style="text-align: center;">Niches</h1>
+
+        <table id="niches-selection">
+            <tr>
+                <th>#</th>
+                <th>Niches</th>
+                <th>Similar Channels</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" class="niche-input" placeholder="Enter Niche"></td>
+            
+               
+                <td><input type="text" class="similar-channels-input" placeholder="Enter similar channel link"></td>
+                <td><button class="save-btn" onclick="saveData(this, 'niches-selection')">Add</button></td>
+            </tr>
+        </table>
+        
+ 
+        
+    </div>
+<script src="script.js"></script>
+    
+</body>
+
+</html>

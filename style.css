@@ -1,0 +1,203 @@
+
+    /* Reset default margin and padding */
+body, h1, h2, p, table {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Style the main container */
+#main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Fallback font */
+    background-color: #fff;
+}
+
+/* Style headings */
+h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Style paragraphs */
+p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Style tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f4f6ff5c;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #d8d8d8;
+}
+
+/* Style input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+Input:focus {
+    outline: none;}
+/* Style buttons */
+.save-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+.delete-btn {
+    padding: 10px 20px;
+    background-color: rgb(197, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.delete-btn:hover {
+    background-color: #7e2424;
+}
+table tr:first-child {
+    background: rgb(30, 59, 68);
+}
+
+
+
+
+
+/* navbar */
+
+
+
+nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    background-color: #dfdfdf;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 70px;
+  }
+  
+  .menu li {
+    display: inline-block;
+    width: 90px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-bottom: 5px;
+  }
+  
+  .menu li:hover .submenu {
+    height: 85px;
+  }
+  
+  .menu > li:hover > a {
+    color: #4CAF50;
+  }
+  
+  .menu > li:hover > a::before {
+    visibility: visible;
+    scale: 1 1;
+  }
+  
+  .submenu {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    background-color: #4CAF50;
+    height: 0;
+    line-height: 40px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-in-out;
+  }
+  .menu li .submenu a {
+    color: #fff;
+    opacity: 0;
+    font-size: 16px;
+    transition: opacity 0.25s;
+  }
+  
+  .menu > li:hover .submenu a {
+    opacity: 1;
+  }
+  
+  .menu > li .submenu a:hover {
+    background: rgb(0 0 0 / 20%);
+  }
+  
+  .menu > li a {
+    color: #686868;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 7px;
+    text-decoration: none;
+    position: relative;
+    height: 100%;
+  }
+  
+  .menu > li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 3px;
+    left: 0px;
+    background-color: #4CAF50;
+    transition: all 0.2s ease-in-out;
+    scale: 0 0;
+    visibility: hidden;
+  }
+  table td {
+    white-space: normal; /* Enable text wrapping */
+}

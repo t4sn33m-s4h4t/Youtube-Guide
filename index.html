@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youtube BreakDown - Tasneem Sahat</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f2f2f2;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    #itemInput {
+        width: calc(100% - 85px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    } #itemInput:focus {
+    outline: none;
+}
+    #addItemBtn {
+        width: 80px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #addItemBtn:hover {
+        background-color: #45a049;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    button.delete-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button.delete-btn:hover {
+        background-color: #d32f2f;
+    }
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./ultimate-purpose.html">Purpose</a></li>
+            <li><a href="./understanding-hooks.html">Hooks</a></li>
+            <li><a href="./script-writing.html">Script</a></li>
+            <!-- <li>
+                <a>Skills</a>
+                <ul class="submenu">
+                    <li><a>React</a></li>
+                    <li><a>Svelte</a></li>    
+                    <li><a>VueJs</a></li>
+                </ul>
+            </li> -->
+            <li>
+                <a href="./niches.html">Niches</a>
+            </li>
+        </ul>
+    </nav>
+<h1>Youtube ToDo List</h1>
+<div class="container">
+    <input type="text" id="itemInput" placeholder="Enter Item">
+    <button id="addItemBtn">Add Item</button>
+    <ul id="itemList"></ul>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        displayItems();
+        document.getElementById("addItemBtn").addEventListener("click", addItem);
+        document.getElementById("itemInput").addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) { // Enter key pressed
+                addItem();
+            }
+        });
+    });
+
+    function addItem() {
+        var itemInput = document.getElementById("itemInput").value.trim();
+        if (itemInput !== "") {
+            var items = JSON.parse(localStorage.getItem('items')) || [];
+            items.push(itemInput);
+            localStorage.setItem('items', JSON.stringify(items));
+            displayItems();
+            document.getElementById("itemInput").value = "";
+            document.getElementById("itemInput").focus();
+        }
+    }
+
+    function displayItems() {
+        var itemList = document.getElementById("itemList");
+        itemList.innerHTML = "";
+        var items = JSON.parse(localStorage.getItem('items')) || [];
+        items.forEach(function(item, index) {
+            var listItem = document.createElement("li");
+            listItem.textContent = item;
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.classList.add("delete-btn");
+            deleteButton.onclick = function() {
+                deleteItem(index);
+            };
+            listItem.appendChild(deleteButton);
+            itemList.appendChild(listItem);
+        });
+    }
+
+    function deleteItem(index) {
+        var items = JSON.parse(localStorage.getItem('items')) || [];
+        items.splice(index, 1);
+        localStorage.setItem('items', JSON.stringify(items));
+        displayItems();
+    }
+</script>
+</body>
+</html>

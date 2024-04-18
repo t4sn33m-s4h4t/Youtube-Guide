@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Purpose</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./ultimate-purpose.html">Purpose</a></li>
+            <li><a href="./understanding-hooks.html">Hooks</a></li>
+            <li><a href="./script-writing.html">Script</a></li>
+            <!-- <li>
+                <a>Skills</a>
+                <ul class="submenu">
+                    <li><a>React</a></li>
+                    <li><a>Svelte</a></li>    
+                    <li><a>VueJs</a></li>
+                </ul>
+            </li> -->
+            <li>
+                <a href="./niches.html">Niches</a>
+            </li>
+        </ul>
+    </nav>
+    <div id='main'>
+        <h1 style="text-align: center;">The Ultimate Purpose</h1>
+        <h2>1. Why do you want to become a YouTuber?</h2>
+        <p>Write down your biggest motivations in the order of priority:</p>
+
+        <table id="motivations-table">
+            <tr>
+                <th>#</th>
+                <th>Motivations </th>
+                <th>Action</th>
+            </tr>
+            
+            <tr>
+                <td></td>
+                
+                <td><input type="text" class="value-input" placeholder="Enter your motivations here"></td>
+                <td>
+                    <button class="save-btn" onclick="saveData(this, 'motivations-table')">Add</button>
+                </td>
+            </tr>
+        </table>
+
+        <h2>2. Who would be your Target Audience?</h2>
+        <p>Define your target audience, be as descriptive as possible. For the last question, think how you can satisfy
+            the needs and wants of your target audience:</p>
+        <table id="target-audience-table">
+            <tr>
+                <th>#</th>
+                <th>Age Group</th>
+                <th>Dialect / Language</th>
+                <th>Region</th>
+                <th>What will be your Value
+                    addition to the audience?</th>
+                <th>Action</th>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td><input type="text" class="age-group-input" placeholder="Enter age group"></td>
+                <td><input type="text" class="language-input" placeholder="Enter dialect/language"></td>
+                <td><input type="text" class="region-input" placeholder="Enter region"></td>
+                <td><input type="text" class="value-input" placeholder="Enter value addition"></td>
+                <td>
+                    <button class="save-btn" onclick="saveData(this, 'target-audience-table')">Add</button>
+                </td>
+            </tr>
+
+
+        </table>
+
+        <h2>3. What do you want to do?</h2>
+        <p>Introspect and think. What are your likes, talents, skills and personal experiences which can be turned into
+            valuable content for the target audience?</p>
+        <table id="content-table">
+
+            <tr>
+                <th>#</th>
+                <th> What are you talented in? </th>
+                <th> What skills do you have? </th>
+                <th> What are you passionate about? </th>
+                <th> Personal valuable experiences for the audience? </th>
+                <th>Action</th>
+            </tr>
+           
+            <tr>
+                <td></td>
+                <td><input type="text" placeholder="Enter what you're talented in"></td>
+                <td><input type="text" class="language-input" placeholder="Enter your skills"></td>
+                <td><input type="text" class="region-input" placeholder="Enter what you're passionate about"></td>
+                <td><input type="text" class="value-input" placeholder="Enter your valuable experiences"></td>
+                <td>
+                    <button class="save-btn" onclick="saveData(this, 'content-table')">Add</button>
+                </td>
+            </tr>
+        </table>
+
+        <h2>4. Take inspiration from the best.</h2>
+        <p>Write down 3 popular creators which you like the most:</p>
+        <table id="inspiration-table">
+            <tr>
+                <th>#</th>
+                <th>Name of Creator</th>
+                <th>What specific things can you take inspiration from?</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" class="creator-input" placeholder="Enter creator name"></td>
+                <td><input type="text" class="inspiration-input" placeholder="Enter inspiration"></td>
+                <td>
+                    <button class="save-btn" onclick="saveData(this, 'inspiration-table')">Add</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

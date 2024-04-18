@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Hooks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./ultimate-purpose.html">Purpose</a></li>
+            <li><a href="./understanding-hooks.html">Hooks</a></li>
+            <li><a href="./script-writing.html">Script</a></li>
+            <!-- <li>
+                <a>Skills</a>
+                <ul class="submenu">
+                    <li><a>React</a></li>
+                    <li><a>Svelte</a></li>    
+                    <li><a>VueJs</a></li>
+                </ul>
+            </li> -->
+            <li>
+                <a href="./niches.html">Niches</a>
+            </li>
+        </ul>
+    </nav>
+    <div id='main'>
+        <h1 style="text-align: center;">Understanding Hooks</h1>
+
+        <p>Scroll on Instagram Reels or Youtube Shorts and analyse 3 videos that hook you The videos which you feel compelled to watch. Why do you think you were so interested in watching those videos?
+        </p>
+        <table id="short-videos-table">
+            <tr>
+                <th>#</th>
+                <th>Short Video Title</th>
+                <th>Why were you hooked?</th>
+                <th>What specific elements can you take inspiration from?</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" class="short-title-input" placeholder="Enter video title"></td>
+                <td><input type="text" class="short-hooked-input" placeholder="Enter reason for being hooked"></td>
+                <td><input type="text" class="short-inspiration-input" placeholder="Enter inspiration elements"></td>
+                <td><button class="save-btn" onclick="saveData(this, 'short-videos-table')">Add</button></td>
+            </tr>
+        </table>
+
+        <p>Now, go to Youtube home page and analyse 3 long form videos that hook you. Why do you think you were so interested in watching those videos?</p>
+
+        <table id="long-videos-table">
+            <tr>
+                <th>#</th>
+                <th>Long Video Title</th>
+                <th>Describe the thumbnail of the video</th>
+                <th>Why were you hooked?</th>
+                <th>What specific elements can you take inspiration from?</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" class="long-title-input" placeholder="Enter video title"></td>
+                <td><input type="text" class="long-thumbnail-input" placeholder="Enter thumbnail description"></td>
+                <td><input type="text" class="long-hooked-input" placeholder="Enter reason for being hooked"></td>
+                <td><input type="text" class="long-inspiration-input" placeholder="Enter inspiration elements"></td>
+                <td><button class="save-btn" onclick="saveData(this, 'long-videos-table')">Add</button></td>
+            </tr>
+        </table>
+
+    </div>
+<script src="script.js"></script>
+    
+</body>
+
+</html>
